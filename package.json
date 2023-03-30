@@ -1,0 +1,15 @@
+{
+  "name": "discord-los-gamers-bot",
+  "version": "1.0.0",
+  "description": "Official Los Gamers Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "David Maddin",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3"
+  }
+}
