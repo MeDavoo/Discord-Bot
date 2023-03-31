@@ -23,7 +23,7 @@ module.exports = {
 							pk();
 						})
 						.catch(collected => {
-							message.channel.send('You lose!');
+							message.channel.send('**You lose!**');
 							message.channel.send("**ANSWER:** " + randpokeg1);
 						});
 				});
