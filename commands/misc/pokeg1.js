@@ -1,10 +1,10 @@
 module.exports = {
-	name: "poke",
+	name: "pokeg1",
 	// Refer to typings.d.ts for available properties.
 	async execute (message, args) {
 		var linkgif = "https://projectpokemon.org/images/normal-sprite/";
 		let { pg1name } = require("../../pokegen1.json")
-		var score = 0
+		var scores = {}; // initialize an empty scores object
 		pk();
 		
 		function pk()
@@ -17,17 +17,31 @@ module.exports = {
 					const filter = response => {return randpokeg1 === response.content.toLowerCase()};
 					message.channel.awaitMessages({ filter, max: 1, time: 10000, errors: ['time'] })
 						.then(collected => {
-							message.channel.send(`${collected.first().author} **got the correct answer!**`);
-							score++;
-							message.channel.send("**SCORE:** " + score);
+
+							const player = collected.first().author; // get the player who got the correct answer
+							if (!scores[player]) {
+							  // if the player's score is not yet initialized, set it to 0
+							  scores[player] = 0;
+							}
+							scores[player]++; // increment the player's score
+							message.channel.send(
+								`${collected.first().author} **got the correct answer! :white_check_mark:**`
+							);
+							message.channel.send(
+							  `**SCORES:** ${Object.entries(scores)
+								.map(([key, value]) => `${key}: ${value}`)
+								.join(", ")}`
+							); // display the scores of all players
 							pk();
 						})
 						.catch(collected => {
-							message.channel.send('**You lose!**');
+							message.channel.send('**Loser! :x:**');
 							message.channel.send("**ANSWER:** " + randpokeg1);
 						});
 				});
 		};
+
+		
 		
 	}
 
