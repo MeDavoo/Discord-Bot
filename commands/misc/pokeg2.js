@@ -4,7 +4,7 @@ module.exports = {
 	async execute (message, args) {
 		var linkgif = "https://projectpokemon.org/images/normal-sprite/";
 		let { pg2name } = require("../../pokegen2.json")
-		var scores = {}; 
+		var scores = {}; // initialize an empty scores object
 		pk();
 		
 		function pk()

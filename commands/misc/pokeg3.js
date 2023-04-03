@@ -12,9 +12,9 @@ module.exports = {
 			randpokeg3 = pg3name[Math.floor(Math.random() * pg3name.length)];
 			var randpickg3 = linkgif + randpokeg3 + ".gif";
 	
-			message.reply(randpickg1)
+			message.reply(randpickg3)
 				.then(() => {
-					const filter = response => {return randpokeg1 === response.content.toLowerCase()};
+					const filter = response => {return randpokeg3 === response.content.toLowerCase()};
 					message.channel.awaitMessages({ filter, max: 1, time: 10000, errors: ['time'] })
 						.then(collected => {
 
@@ -36,7 +36,7 @@ module.exports = {
 						})
 						.catch(collected => {
 							message.channel.send('**Loser! :x:**');
-							message.channel.send("**ANSWER:** " + randpokeg1);
+							message.channel.send("**ANSWER:** " + randpokeg3);
 						});
 				});
 		};
