@@ -15,6 +15,14 @@ module.exports = {
 	  var scores3 = {};
 	  var scores4 = {};
 	  var scores5 = {};
+
+	  let gameInProgress = false; // initialize gameInProgress flag to false
+  
+	  // check if game is already in progress
+	  if (gameInProgress) {
+		message.reply("A game is already in progress. Please wait until it finishes.");
+		return;
+	  }
 	    
 	  // prompt the user to choose the generation
 	  message.reply(generationPrompt)
@@ -74,6 +82,7 @@ module.exports = {
 			  .catch(collected => {
 				message.channel.send('**Loser! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg1);
+				gameInProgress = false;
 			  });
 		  });
 	  };
@@ -108,6 +117,7 @@ module.exports = {
 			  .catch(collected => {
 				message.channel.send('**Loser! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg2);
+				gameInProgress = false;
 			  });
 		  });
 	  };
@@ -142,6 +152,7 @@ module.exports = {
 			  .catch(collected => {
 				message.channel.send('**Loser! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg3);
+				gameInProgress = false;
 			  });
 		  });
 	  };
@@ -176,6 +187,7 @@ module.exports = {
 			  .catch(collected => {
 				message.channel.send('**Loser! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg4);
+				gameInProgress = false;
 			  });
 		  });
 	  };
@@ -210,6 +222,7 @@ module.exports = {
 			  .catch(collected => {
 				message.channel.send('**Loser! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg5);
+				gameInProgress = false;
 			  });
 		  });
 	  };	
