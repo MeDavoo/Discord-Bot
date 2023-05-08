@@ -34,5 +34,5 @@ module.exports = {
 		message.channel.send({
 			content: "https://imgur.com/CFgn4rp",
 		});
-	},
+	}
 };

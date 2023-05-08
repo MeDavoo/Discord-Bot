@@ -56,7 +56,7 @@ module.exports = {
 		randpokeg1 = pg1name[Math.floor(Math.random() * pg1name.length)];
 		var randpickg1 = linkgif + randpokeg1 + ".gif";
   
-		message.reply(randpickg1)
+		message.channel.send(randpickg1)
 		  .then(() => {
 			const filter = response => {
 			  return randpokeg1 === response.content.toLowerCase();
@@ -70,18 +70,18 @@ module.exports = {
 				}
 				scores[player]++; // increment the player's score
 				message.channel.send(
-				  `${collected.first().author} **got the correct answer! :white_check_mark:**`
+				  `${collected.first().author.username} **got the correct answer! :white_check_mark:**`
 				);
-				message.channel.send(
-				  `**SCORES:** ${Object.entries(scores)
-					.map(([key, value]) => `${key}: ${value}`)
-					.join(", ")}`
-				); // display the scores of all players
 				pk1();
 			  })
 			  .catch(collected => {
-				message.channel.send('**Loser! :x:**');
+				message.channel.send('**Game Over! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg1);
+				message.channel.send(
+					`**FINAL SCORES:** ${Object.entries(scores)
+					  .map(([key, value]) => `${key}: ${value}`)
+					  .join(", ")}`
+				  ); // display the scores of all players
 				gameInProgress = false;
 			  });
 		  });
@@ -91,7 +91,7 @@ module.exports = {
 		randpokeg2 = pg1name[Math.floor(Math.random() * pg2name.length)];
 		var randpickg2 = linkgif + randpokeg2 + ".gif";
   
-		message.reply(randpickg2)
+		message.channel.send(randpickg2)
 		  .then(() => {
 			const filter = response => {
 			  return randpokeg2 === response.content.toLowerCase();
@@ -105,18 +105,18 @@ module.exports = {
 				}
 				scores2[player]++; // increment the player's score
 				message.channel.send(
-				  `${collected.first().author} **got the correct answer! :white_check_mark:**`
+				  `${collected.first().author.username} **got the correct answer! :white_check_mark:**`
 				);
-				message.channel.send(
-				  `**SCORES:** ${Object.entries(scores2)
-					.map(([key, value]) => `${key}: ${value}`)
-					.join(", ")}`
-				); // display the scores of all players
 				pk2();
 			  })
 			  .catch(collected => {
-				message.channel.send('**Loser! :x:**');
+				message.channel.send('**Game Over! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg2);
+				message.channel.send(
+					`**FINAL SCORES:** ${Object.entries(scores)
+					  .map(([key, value]) => `${key}: ${value}`)
+					  .join(", ")}`
+				  ); // display the scores of all players
 				gameInProgress = false;
 			  });
 		  });
@@ -126,7 +126,7 @@ module.exports = {
 		randpokeg3 = pg3name[Math.floor(Math.random() * pg3name.length)];
 		var randpickg3 = linkgif + randpokeg3 + ".gif";
   
-		message.reply(randpickg3)
+		message.channel.send(randpickg3)
 		  .then(() => {
 			const filter = response => {
 			  return randpokeg3 === response.content.toLowerCase();
@@ -140,18 +140,18 @@ module.exports = {
 				}
 				scores3[player]++; // increment the player's score
 				message.channel.send(
-				  `${collected.first().author} **got the correct answer! :white_check_mark:**`
+				  `${collected.first().author.username} **got the correct answer! :white_check_mark:**`
 				);
-				message.channel.send(
-				  `**SCORES:** ${Object.entries(scores3)
-					.map(([key, value]) => `${key}: ${value}`)
-					.join(", ")}`
-				); // display the scores of all players
 				pk3();
 			  })
 			  .catch(collected => {
-				message.channel.send('**Loser! :x:**');
+				message.channel.send('**Game Over! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg3);
+				message.channel.send(
+					`**FINAL SCORES:** ${Object.entries(scores)
+					  .map(([key, value]) => `${key}: ${value}`)
+					  .join(", ")}`
+				  ); // display the scores of all players
 				gameInProgress = false;
 			  });
 		  });
@@ -161,7 +161,7 @@ module.exports = {
 		randpokeg4 = pg4name[Math.floor(Math.random() * pg4name.length)];
 		var randpickg4 = linkgif + randpokeg4 + ".gif";
   
-		message.reply(randpickg4)
+		message.channel.send(randpickg4)
 		  .then(() => {
 			const filter = response => {
 			  return randpokeg4 === response.content.toLowerCase();
@@ -175,18 +175,18 @@ module.exports = {
 				}
 				scores4[player]++; // increment the player's score
 				message.channel.send(
-				  `${collected.first().author} **got the correct answer! :white_check_mark:**`
+				  `${collected.first().author.username} **got the correct answer! :white_check_mark:**`
 				);
-				message.channel.send(
-				  `**SCORES:** ${Object.entries(scores4)
-					.map(([key, value]) => `${key}: ${value}`)
-					.join(", ")}`
-				); // display the scores of all players
 				pk4();
 			  })
 			  .catch(collected => {
-				message.channel.send('**Loser! :x:**');
-				message.channel.send("**ANSWER:** " + randpokeg4);
+				message.channel.send('**Game Over! :x:**');
+				message.channel.send("**ANSWER:** " + randpoke4);
+				message.channel.send(
+					`**FINAL SCORES:** ${Object.entries(scores)
+					  .map(([key, value]) => `${key}: ${value}`)
+					  .join(", ")}`
+				  ); // display the scores of all players
 				gameInProgress = false;
 			  });
 		  });
@@ -196,7 +196,7 @@ module.exports = {
 		randpokeg5 = pg5name[Math.floor(Math.random() * pg5name.length)];
 		var randpickg5 = linkgif + randpokeg5 + ".gif";
   
-		message.reply(randpickg5)
+		message.channel.send(randpickg5)
 		  .then(() => {
 			const filter = response => {
 			  return randpokeg5 === response.content.toLowerCase();
@@ -210,18 +210,18 @@ module.exports = {
 				}
 				scores5[player]++; // increment the player's score
 				message.channel.send(
-				  `${collected.first().author} **got the correct answer! :white_check_mark:**`
+				  `${collected.first().author.username} **got the correct answer! :white_check_mark:**`
 				);
-				message.channel.send(
-				  `**SCORES:** ${Object.entries(scores5)
-					.map(([key, value]) => `${key}: ${value}`)
-					.join(", ")}`
-				); // display the scores of all players
 				pk5();
 			  })
 			  .catch(collected => {
-				message.channel.send('**Loser! :x:**');
+				message.channel.send('**Game Over! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg5);
+				message.channel.send(
+					`**FINAL SCORES:** ${Object.entries(scores)
+					  .map(([key, value]) => `${key}: ${value}`)
+					  .join(", ")}`
+				  ); // display the scores of all players
 				gameInProgress = false;
 			  });
 		  });
