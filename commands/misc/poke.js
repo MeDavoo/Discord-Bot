@@ -113,7 +113,7 @@ module.exports = {
 				message.channel.send('**Game Over! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg2);
 				message.channel.send(
-					`**FINAL SCORES:** ${Object.entries(scores)
+					`**FINAL SCORES:** ${Object.entries(scores2)
 					  .map(([key, value]) => `${key}: ${value}`)
 					  .join(", ")}`
 				  ); // display the scores of all players
@@ -148,7 +148,7 @@ module.exports = {
 				message.channel.send('**Game Over! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg3);
 				message.channel.send(
-					`**FINAL SCORES:** ${Object.entries(scores)
+					`**FINAL SCORES:** ${Object.entries(scores3)
 					  .map(([key, value]) => `${key}: ${value}`)
 					  .join(", ")}`
 				  ); // display the scores of all players
@@ -181,9 +181,9 @@ module.exports = {
 			  })
 			  .catch(collected => {
 				message.channel.send('**Game Over! :x:**');
-				message.channel.send("**ANSWER:** " + randpoke4);
+				message.channel.send("**ANSWER:** " + randpokeg4);
 				message.channel.send(
-					`**FINAL SCORES:** ${Object.entries(scores)
+					`**FINAL SCORES:** ${Object.entries(scores4)
 					  .map(([key, value]) => `${key}: ${value}`)
 					  .join(", ")}`
 				  ); // display the scores of all players
@@ -218,7 +218,7 @@ module.exports = {
 				message.channel.send('**Game Over! :x:**');
 				message.channel.send("**ANSWER:** " + randpokeg5);
 				message.channel.send(
-					`**FINAL SCORES:** ${Object.entries(scores)
+					`**FINAL SCORES:** ${Object.entries(scores5)
 					  .map(([key, value]) => `${key}: ${value}`)
 					  .join(", ")}`
 				  ); // display the scores of all players
